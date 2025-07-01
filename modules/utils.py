@@ -14,7 +14,7 @@ def get_arguments() -> dict[str, str]:
         "-i",
         "--input",
         type=str,
-        default="cvtest.avi",
+        default=None,
         help="Path to input video (e.g. cvtest.avi)",
     )
     parser.add_argument(
@@ -28,14 +28,14 @@ def get_arguments() -> dict[str, str]:
         "-d",
         "--device",
         type=str,
-        default="mps",
+        default="cpu",
         help="Device to use: 'mps', 'cuda', or 'cpu'",
     )
     parser.add_argument(
         "-s",
         "--show",
         action="store_true",
-        default=True,
+        default=False,
         help="Show video on screen (default: False)",
     )
     return vars(parser.parse_args())
