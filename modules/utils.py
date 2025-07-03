@@ -14,7 +14,7 @@ def get_arguments() -> dict[str, str]:
         "-i",
         "--input",
         type=str,
-        default='cvtest.avi',
+        default=None,
         help="Path to input video (e.g. cvtest.avi)",
     )
     parser.add_argument(
